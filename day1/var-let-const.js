@@ -56,3 +56,15 @@
 
 // console.log('user1', user1);
 // console.log('user2', user2);
+
+//8.
+
+const user1 = {
+    name: 'Ahmet',
+};
+
+// const user2 = {...user1, name: 'Mehmet' }; //Alttaki kullanımla aynı, daha kısa tercih edilebilir.
+const user2 = Object.assign({}, user1, { name: 'Can' });
+
+console.log('user', user1);
+console.log('user2', user2);

@@ -1,0 +1,24 @@
+{
+    "name": "patika",
+    "version": "1.0.0",
+    "description": "Patika.dev aracılığıyla katılmış olduğum Hepsiburada Frontend Bootcamp derslerini tekrar ettiğim repo",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mgokhandev/hepsiburada-bootcamp-tekrar.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/mgokhandev/hepsiburada-bootcamp-tekrar/issues"
+    },
+    "homepage": "https://github.com/mgokhandev/hepsiburada-bootcamp-tekrar#readme",
+    "dependencies": {
+        "axios": "^0.21.4",
+        "slugify": "^1.6.0"
+    }
+}
