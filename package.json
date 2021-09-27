@@ -19,6 +19,8 @@
     "homepage": "https://github.com/mgokhandev/hepsiburada-bootcamp-tekrar#readme",
     "dependencies": {
         "axios": "^0.21.4",
+        "express": "^4.17.1",
+        "express-backend": "^2.0.0",
         "slugify": "^1.6.0"
     }
 }
