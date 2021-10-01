@@ -1,30 +1,34 @@
-import React from "react";
-import { useState } from "react";
-
-const defaultValues = {
-  count: 1,
-  name: "Ahmet",
-};
+import React, { useState, useEffect } from "react";
 
 function Counter() {
   const [count, setCount] = useState(1);
+  const [name, setName] = useState("");
 
-  //   const increase = () => setCount((c) => c + 1);
-  //   const decrease = () => setCount((c) => c - 1);
+  useEffect(() => {
+    console.log("state değişti");
+  }, [count]);
 
-  const increaseOrDecrease = (type) => {
-    if (type === "+") {
-      return setCount((c) => c + 1);
-    }
-    setCount((c) => c - 1);
-  };
+  useEffect(() => {
+    console.log("mount değişti");
+
+    return () => console.log("Unmounted");
+  });
+
+  const increase = () => setCount((c) => c + 1);
+  const decrease = () => setCount((c) => c - 1);
 
   return (
     <div>
       <h1>{count}</h1>
-      <button onClick={() => increaseOrDecrease("-")}>Azalt</button>
-      <button onClick={() => increaseOrDecrease("+")}>Arttir</button>
-      <button onClick={() => setCount(defaultValues.count)}>Reset</button>
+      <button onClick={decrease}>Azalt</button>
+      <button onClick={increase}>Arttır</button>
+
+      <hr />
+      <input
+        placeholder="name"
+        name={name}
+        onChange={(e) => setName(e.target.value)}
+      />
     </div>
   );
 }

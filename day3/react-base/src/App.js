@@ -2,8 +2,11 @@ import "./App.css";
 // import Users from "./components/Users.js";
 // import Paragraph from "./components/Paragraph.js";
 import Counter from "./components/Counter";
+// import Form from "./components/Form";
+import { useState } from "react";
 
 function App() {
+  const [toggle, setToggle] = useState(true);
   return (
     <div className="App">
       {/* <Paragraph
@@ -11,11 +14,14 @@ function App() {
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium provident enim, accusantium distinctio amet quae et illo, blanditiis minima earum aut, officiis quidem? Inventore facilis tempora doloribus nostrum nemo repellat?"
         }
         numberOfLines={4}
-      />
-      <Users title="Users" list={[{ name: "Mehmet" }, { name: "Elif" }]} />
-      <Users title="İsimler" list={[{ name: "İsim1" }, { name: "İsim2" }]} /> */}
+      /> */}
+      {/* <Users title="Users" /> */}
 
-      <Counter />
+      {toggle ? <Counter /> : null}
+      <button onClick={() => setToggle(!toggle)}>
+        Toggle {toggle ? "Hide" : "Show"}
+      </button>
+      {/* <Form /> */}
     </div>
   );
 }
